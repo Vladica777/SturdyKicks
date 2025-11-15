@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="product.html">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="main-nav">
+      <!-- Logo -->
+      <a class="nav-logo" href="Landing Page.html">
+        <img src="images/logo.png" alt="Sturdykicks logo">
+      </a>
+
+
+
+      <div class="nav-inner">
+        <!-- Centered Content -->
+        <ul id="primary-navigation" class="nav-links">
+          <li><a class="nav-link is-active" aria-current="page" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="#trending">Products</a></li>
+          <li><a class="nav-link" href="#">About us</a></li>
+          <li><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+      </div>
+      <div>
+        <ul class="nav-icons">
+          <!-- Search -->
+          <li class="nav-search">
+            <input class="search-input" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+            <button class="nav-icon-link search-button" type="button" id="searchIcon">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+          </li>
+
+          <!-- Shopping Cart -->
+          <li>
+            <a class="nav-icon-link" href="Card Payment Flow.html">
+              <span id="ToHide" class="cart-badge">0</span>
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <!-- Log In -->
+          <li class="user-menu">
+            <button class="nav-icon-link user-button">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </button>
+
+            <div class="user-dropdown">
+              <a href="#!" class="dropdown-item">Log in</a>
+              <a href="#!" class="dropdown-item">Sign up</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Burger -->
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- Hero section (video în loc de carousel Bootstrap/MDB) -->
+  <section class="hero-section">
+    <div class="hero-media">
+      <video class="hero-video" autoplay loop muted>
+        <source src="videos/video1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <main class="page-main page-main--landing">
+    <section class="trending section-spacing-lg" id="trending">
+      <header class="section-header">
+        <h1 class="section-title">Trending Categories</h1>
+      </header>
+
+      <div class="categories">
+        <h2 class="category c1" data-model="air-force">Air Force 1&#8594;</h4>
+          <h2 class="category c2" data-model="air-jordan">Air Jordan 1&#8594;</h4>
+            <h2 class="category c3" data-model="air-jordan-4">Air Jordan 4&#8594;</h4>
+              <h2 class="category c4" data-model="dunks">Dunks&#8594;</h4>
+                <h2 class="category c5" data-model="others">Others&#8594;</h4>
+      </div>
+
+      <div class="preview" id="preview">
+        <div id="defaultState" class="card-grid preview-grid">
+          <article class="card air-force">
+            <img src="images/air-force-models.png" class="card-img-top" alt="Air Force Models" />
+            <div class="card-body">
+              <h5 class="card-title">Air Force 1 Models</h5>
+            </div>
+          </article>
+
+          <article class="card air-jordan">
+            <img src="images/air-jordans-models.png" class="card-img-top" alt="Air Jordan Models" />
+            <div class="card-body">
+              <h5 class="card-title">Air Jordan 1 Models</h5>
+            </div>
+          </article>
+
+          <article class="card air-jordan-4">
+            <img src="images/air-jordan-4-black-cat.png" class="card-img-top" alt="Air Jordan 4 Models" />
+            <div class="card-body">
+              <h5 class="card-title">Air Jordan 4 Models</h5>
+            </div>
+          </article>
+
+          <article class="card dunks">
+            <img src="images/dunks-models.png" class="card-img-top" alt="Dunks Models" />
+            <div class="card-body">
+              <h5 class="card-title">Dunks Models</h5>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Air Force 1 Row -->
+<div id="air-force-row" class="card-grid" style="display: none;">
+  <article class="card air-force-model" onclick="window.location.href='product.html?id=air-force-1-model1'">
+    <img src="images/air-force-1-07-model1.png" class="card-img-top" alt="Air Force 1 Model 1" />
+    <div class="card-body">
+      <h5 class="card-title">Air Force 1 Model 1</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>119.00&euro;</p>
+      <a id="button1"  class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-force-model" onclick="window.location.href='product.html?id=air-force-1-model2'">
+    <img src="images/air-force-1-07-model2.png" class="card-img-top" alt="Air Force 1 Model 2" />
+    <div class="card-body">
+      <h5 class="card-title">Air Force 1 Model 2</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>119.00&euro;</p>
+      <a id="button2"  class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-force-model" onclick="window.location.href='product.html?id=air-force-1-model3'">
+    <img src="images/air-force-1-07-model3.png" class="card-img-top" alt="Air Force 1 Model 3" />
+    <div class="card-body">
+      <h5 class="card-title">Air Force 1 Model 3</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>119.00&euro;</p>
+      <a id="button3"  class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-force-model" onclick="window.location.href='product.html?id=air-force-1-model4'">
+    <img src="images/air-force-1-07-model4.png" class="card-img-top" alt="Air Force 1 Model 4" />
+    <div class="card-body">
+      <h5 class="card-title">Air Force 1 Model 4</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>119.00&euro;</p>
+      <a id="button4"  class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+</div>
+
+<!-- Air Jordan 1 Row -->
+<div id="air-jordan-1-row" class="card-grid" style="display: none;">
+  <article class="card air-jordan-1-model" onclick="window.location.href='product.html?id=air-jordan-1-model1'">
+    <img src="images/air-jordan-1-model1.png" class="card-img-top" alt="Air Jordan 1 Model 1" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 1 Model 1</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>249.00&euro;</p>
+      <a id="button5" href="product.html?id=air-jordan-1-model1" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-jordan-1-model" onclick="window.location.href='product.html?id=air-jordan-1-model2'">
+    <img src="images/air-jordan-1-model2.png" class="card-img-top" alt="Air Jordan 1 Model 2" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 1 Model 2</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>249.00&euro;</p>
+      <a id="button6" href="product.html?id=air-jordan-1-model2" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-jordan-1-model" onclick="window.location.href='product.html?id=air-jordan-1-model3'">
+    <img src="images/air-jordan-1-model3.png" class="card-img-top" alt="Air Jordan 1 Model 3" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 1 Model 3</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>249.00&euro;</p>
+      <a id="button7" href="product.html?id=air-jordan-1-model3" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-jordan-1-model" onclick="window.location.href='product.html?id=air-jordan-1-model4'">
+    <img src="images/air-jordan-1-model4.png" class="card-img-top" alt="Air Jordan 1 Model 4" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 1 Model 4</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>249.00&euro;</p>
+      <a id="button8" href="product.html?id=air-jordan-1-model4" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+</div>
+
+<!-- Air Jordan 4 Row -->
+<div id="air-jordan-4-row" class="card-grid" style="display: none;">
+  <article class="card air-jordan-4-model" onclick="window.location.href='product.html?id=air-jordan-4-model1'">
+    <img src="images/air-jordan-4-model1.png" class="card-img-top" alt="Air Jordan 4 Model 1" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 4 Model 1</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>349.00&euro;</p>
+      <a id="button9" href="product.html?id=air-jordan-4-model1" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-jordan-4-model" onclick="window.location.href='product.html?id=air-jordan-4-model2'">
+    <img src="images/air-jordan-4-model2.png" class="card-img-top" alt="Air Jordan 4 Model 2" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 4 Model 2</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>349.00&euro;</p>
+      <a id="button10" href="product.html?id=air-jordan-4-model2" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-jordan-4-model" onclick="window.location.href='product.html?id=air-jordan-4-model3'">
+    <img src="images/air-jordan-4-model3.png" class="card-img-top" alt="Air Jordan 4 Model 3" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 4 Model 3</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>349.00&euro;</p>
+      <a id="button11" href="product.html?id=air-jordan-4-model3" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card air-jordan-4-model" onclick="window.location.href='product.html?id=air-jordan-4-model4'">
+    <img src="images/air-jordan-4-model4.png" class="card-img-top" alt="Air Jordan 4 Model 4" />
+    <div class="card-body">
+      <h5 class="card-title">Air Jordan 4 Model 4</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>349.00&euro;</p>
+      <a id="button12" href="product.html?id=air-jordan-4-model4" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+</div>
+
+<!-- Dunks Row -->
+<div id="dunks-row" class="card-grid" style="display: none;">
+  <article class="card dunks-model" onclick="window.location.href='product.html?id=dunk-model1'">
+    <img src="images/dunk-low-model1.png" class="card-img-top" alt="Dunks Model 1" />
+    <div class="card-body">
+      <h5 class="card-title">Dunks Model 1</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>149.00&euro;</p>
+      <a id="button13" href="product.html?id=dunk-model1" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card dunks-model" onclick="window.location.href='product.html?id=dunk-model2'">
+    <img src="images/dunk-low-model2.png" class="card-img-top" alt="Dunks Model 2" />
+    <div class="card-body">
+      <h5 class="card-title">Dunks Model 2</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>149.00&euro;</p>
+      <a id="button14" href="product.html?id=dunk-model2" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card dunks-model" onclick="window.location.href='product.html?id=dunk-model3'">
+    <img src="images/dunk-low-model3.png" class="card-img-top" alt="Dunks Model 3" />
+    <div class="card-body">
+      <h5 class="card-title">Dunks Model 3</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>149.00&euro;</p>
+      <a id="button15" href="product.html?id=dunk-model3" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+
+  <article class="card dunks-model" onclick="window.location.href='product.html?id=dunk-model4'">
+    <img src="images/dunk-low-model4.png" class="card-img-top" alt="Dunks Model 4" />
+    <div class="card-body">
+      <h5 class="card-title">Dunks Model 4</h5>
+      <p class="card-text">Men's Shoes</p>
+      <p>149.00&euro;</p>
+      <a id="button16" href="product.html?id=dunk-model4" class="button button-dark align-end">Add to cart</a>
+    </div>
+  </article>
+</div>
+
+
+    <section class="fresh section-spacing-lg">
+      <header class="section-header text-center">
+        <h1 class="section-title">Fresh Kicks This Year</h1>
+        <h4 class="section-subtitle">These are the most popular sneakers this year</h4>
+      </header>
+
+      <div class="top-models">
+        <div class="card-grid top-models-grid">
+          <article class="card" id="product">
+            <img src="images/air-force-models-removebg.png" class="card-img-top"
+              onclick="window.location.href='Product buying.html'" class="card-img-main"
+              alt="Nike Air Force 1 Low '07 White" />
+            <div class="card-body">
+              <h5 class="card-title">Nike Air Force 1 Low '07</h5>
+              <p class="card-text">White</p>
+              <p>119.00&euro;</p>
+              <a id="button1" href="#!" class="button button-dark align-end">Add to cart</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/air-jordan-1-lost-and-found.png" class="card-img-top"
+              alt="Jordan 1 Retro High OG Chicago Lost and Found" />
+            <div class="card-body">
+              <h5 class="card-title">Jordan 1 Retro High OG</h5>
+              <p class="card-text">Chicago Lost and Found</p>
+              <p>249.00&euro;</p>
+              <a id="button2" href="#!" class="button button-dark align-end">Add to cart</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/air-jordan-4-red-thunder.png" class="card-img-top" alt="Jordan 4 Retro Red Thunder" />
+            <div class="card-body">
+              <h5 class="card-title">Jordan 4 Retro</h5>
+              <p class="card-text">Red Thunder</p>
+              <p>349.00&euro;</p>
+              <a id="button3" href="#!" class="button button-dark align-end">Add to cart</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+
+      </div>
+      </div>
+    </section>
+    </section>
+
+
+    <section id="zone2" class="section-spacing-lg">
+      <div class="advice">
+        <div class="advice-title">
+          <h2>Steps To Take Care Of Your <span>Shoes</span></h2>
+        </div>
+        <div class="advice-subtitle">
+          <p>
+            By following these three steps - proper cleaning, suitable storage, and wearing proper socks - you'll be
+            well on your way to maintaining clean and fresh sneakers.
+          </p>
+        </div>
+      </div>
+
+      <div class="advice-grid">
+        <article class="advice-item">
+          <img src="images/logo.png" class="advice-logo" alt="Sturdykicks logo">
+          <h4>Clean</h4>
+          <p>Regularly remove dirt and dust using a soft brush or cloth.</p>
+          <div>
+            <img src="images/clean.png" alt="Cleaning shoes" class="advice-image">
+          </div>
+        </article>
+
+        <article class="advice-item">
+          <img src="images/logo.png" class="advice-logo" alt="Sturdykicks logo">
+          <h4>Condition</h4>
+          <p>Apply a suitable shoe conditioner or protectant to keep the material moisturized and protected.</p>
+          <div class="advice-image-wrapper">
+            <img src="images/condition.png" alt="Conditioning shoes" class="advice-image">
+          </div>
+        </article>
+
+        <article class="advice-item">
+          <img src="images/logo.png" class="advice-logo" alt="Sturdykicks logo">
+          <h4>Store</h4>
+          <p>Keep your shoes in a cool, dry place away from direct sunlight and extreme temperatures.</p>
+          <img src="images/store.png" alt="Storing shoes" class="advice-image">
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <div class="newsletter-content" id="newsletter-content">
+        <h2>Subscribe to newsletter</h2>
+        <p>By following our newsletter you will be able to find out about the latest Nike SNKRS App drops.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your mail" id="newsletter-input">
+          <button type="submit" class="button button-dark" id="subscribe-button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content-1">
+      <div class="footer-column footer-main">
+        <h3>Stay Fresh</h3>
+        <p>sturdykicks@gmail.com</p>
+        <p>+40732183884</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Links</h3>
+        <p>About us</p>
+        <p>Products</p>
+        <p>Blogs</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Community</h3>
+        <p>About us</p>
+        <p>Products</p>
+        <p>Blogs</p>
+      </div>
+    </div>
+
+    <div class="footer-content-2">
+      <div class="logo-footer">
+        <img src="images/logo.png" alt="Sturdykicks footer logo">
+      </div>
+
+      <div class="copyright-footer">
+        <p>Copyrights. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+[
+  {
+    "id": "air-force-1-model1",
+    "name": "Nike Air Force 1 '07",
+    "color": "White",
+    "price": "119.00€",
+    "description": "Classic AF1 with premium leather and all-white design.",
+    "mainImage": "images/air-force-1-07-model1.png",
+    "thumbnails": [
+      "images/air-force-1-07-model1.png",
+      "images/air-force-1-07-model2.png",
+      "images/air-force-1-07-model3.png"
+    ]
+  },
+  {
+    "id": "air-force-1-model2",
+    "name": "Nike Air Force 1 '07",
+    "color": "White/Black",
+    "price": "119.00€",
+    "description": "Stylish AF1 with black swoosh.",
+    "mainImage": "images/air-force-1-07-model2.png",
+    "thumbnails": [
+      "images/air-force-1-07-model2.png"
+    ]
+  },
+  {
+    "id": "air-force-1-model3",
+    "name": "Nike Air Force 1 '07",
+    "color": "White/Blue",
+    "price": "119.00€",
+    "description": "AF1 with subtle blue accents.",
+    "mainImage": "images/air-force-1-07-model3.png",
+    "thumbnails": [
+      "images/air-force-1-07-model3.png"
+    ]
+  },
+  {
+    "id": "air-force-1-model4",
+    "name": "Nike Air Force 1 '07",
+    "color": "Black",
+    "price": "119.00€",
+    "description": "Full black AF1 — clean and minimal.",
+    "mainImage": "images/air-force-1-07-model4.png",
+    "thumbnails": [
+      "images/air-force-1-07-model4.png"
+    ]
+  },
+
+  {
+    "id": "air-jordan-1-model1",
+    "name": "Air Jordan 1",
+    "color": "Chicago Lost & Found",
+    "price": "249.00€",
+    "description": "Iconic Jordan 1 Chicago colorway.",
+    "mainImage": "images/air-jordan-1-model1.png",
+    "thumbnails": [
+      "images/air-jordan-1-model1.png"
+    ]
+  },
+  {
+    "id": "air-jordan-1-model2",
+    "name": "Air Jordan 1",
+    "color": "Black/White",
+    "price": "249.00€",
+    "description": "Clean Jordan 1 monochrome look.",
+    "mainImage": "images/air-jordan-1-model2.png",
+    "thumbnails": [
+      "images/air-jordan-1-model2.png"
+    ]
+  },
+  {
+    "id": "air-jordan-1-model3",
+    "name": "Air Jordan 1",
+    "color": "UNC Blue",
+    "price": "249.00€",
+    "description": "Famous UNC colorway.",
+    "mainImage": "images/air-jordan-1-model3.png",
+    "thumbnails": [
+      "images/air-jordan-1-model3.png"
+    ]
+  },
+  {
+    "id": "air-jordan-1-model4",
+    "name": "Air Jordan 1",
+    "color": "Royal Black",
+    "price": "249.00€",
+    "description": "Classic Royal Blue Jordan 1.",
+    "mainImage": "images/air-jordan-1-model4.png",
+    "thumbnails": [
+      "images/air-jordan-1-model4.png"
+    ]
+  },
+
+  {
+    "id": "air-jordan-4-model1",
+    "name": "Air Jordan 4",
+    "color": "Military Black",
+    "price": "349.00€",
+    "description": "The famous Military Black AJ4.",
+    "mainImage": "images/air-jordan-4-model1.png",
+    "thumbnails": [
+      "images/air-jordan-4-model1.png"
+    ]
+  },
+  {
+    "id": "air-jordan-4-model2",
+    "name": "Air Jordan 4",
+    "color": "Red Thunder",
+    "price": "349.00€",
+    "description": "The bold Red Thunder AJ4.",
+    "mainImage": "images/air-jordan-4-model2.png",
+    "thumbnails": [
+      "images/air-jordan-4-model2.png"
+    ]
+  },
+  {
+    "id": "air-jordan-4-model3",
+    "name": "Air Jordan 4",
+    "color": "UNC Blue",
+    "price": "349.00€",
+    "description": "UNC university blue AJ4.",
+    "mainImage": "images/air-jordan-4-model3.png",
+    "thumbnails": [
+      "images/air-jordan-4-model3.png"
+    ]
+  },
+  {
+    "id": "air-jordan-4-model4",
+    "name": "Air Jordan 4",
+    "color": "Black Cat",
+    "price": "349.00€",
+    "description": "The famous all-black Black Cat AJ4.",
+    "mainImage": "images/air-jordan-4-model4.png",
+    "thumbnails": [
+      "images/air-jordan-4-model4.png"
+    ]
+  },
+
+  {
+    "id": "dunk-model1",
+    "name": "Nike Dunk Low",
+    "color": "Panda",
+    "price": "149.00€",
+    "description": "The most popular Dunk ever.",
+    "mainImage": "images/dunk-low-model1.png",
+    "thumbnails": [
+      "images/dunk-low-model1.png"
+    ]
+  },
+  {
+    "id": "dunk-model2",
+    "name": "Nike Dunk Low",
+    "color": "Grey Fog",
+    "price": "149.00€",
+    "description": "Clean grey fog Dunk.",
+    "mainImage": "images/dunk-low-model2.png",
+    "thumbnails": [
+      "images/dunk-low-model2.png"
+    ]
+  },
+  {
+    "id": "dunk-model3",
+    "name": "Nike Dunk Low",
+    "color": "Black/White",
+    "price": "149.00€",
+    "description": "Classic two-tone design.",
+    "mainImage": "images/dunk-low-model3.png",
+    "thumbnails": [
+      "images/dunk-low-model3.png"
+    ]
+  },
+  {
+    "id": "dunk-model4",
+    "name": "Nike Dunk Low",
+    "color": "University Blue",
+    "price": "149.00€",
+    "description": "UNC-inspired Dunk.",
+    "mainImage": "images/dunk-low-model4.png",
+    "thumbnails": [
+      "images/dunk-low-model4.png"
+    ]
+  }
+]

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Buying</title>
+
+  <link rel="stylesheet" href="style_product.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="main-nav">
+      <!-- Logo -->
+      <a class="nav-logo" href="index.html">
+        <img src="images/logo.png" alt="Sturdykicks logo">
+      </a>
+
+      <!-- Burger -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="nav-inner">
+        <!-- Centered Content -->
+        <ul id="primary-navigation" class="nav-links">
+          <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+          <li><a class="nav-link is-active" href="#">Products</a></li>
+          <li><a class="nav-link" href="#">About us</a></li>
+          <li><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <ul class="nav-icons">
+          <!-- Shopping Cart -->
+          <li>
+            <a class="nav-icon-link" href="Card Payment Flow.html">
+              <span id="ToHide" class="cart-badge">0</span>
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <!-- Search -->
+          <li class="nav-search">
+            <input class="search-input" type="search" placeholder="Search" aria-label="Search">
+            <button class="nav-icon-link search-button" type="button">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+          </li>
+
+          <!-- Log In -->
+          <li>
+            <a class="nav-icon-link" href="#">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+ <main class="product-page">
+  <section class="product-layout">
+
+    <!-- LEFT: IMAGE GALLERY -->
+    <div class="image-gallery">
+      <div class="gallery">
+
+        <div class="main-image">
+          <!-- IMAGINE DIN JSON -->
+          <img id="mainImg"
+               src=""
+               alt="">
+        </div>
+
+        <!-- THUMBNAILS DIN JSON -->
+        <div class="thumbnails" id="thumbnailsContainer">
+          <!-- Se vor genera automat prin JS -->
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT: PRODUCT INFO -->
+    <div class="product-info">
+
+      <div class="title">
+        <!-- TITLU DIN JSON -->
+        <h1 id="productTitle"></h1>
+      </div>
+
+      <div class="subtitle">
+        <!-- CULOARE DIN JSON -->
+        <h4 id="productColor"></h4>
+      </div>
+
+      <div class="price">
+        <!-- PREȚ DIN JSON -->
+        <h4 id="productPrice"></h4>
+      </div>
+
+      <div class="buttons">
+        <button onclick="window.location.href='Card Payment Flow.html'" 
+                type="button" 
+                class="button button-success">
+          Check Out
+        </button>
+
+        <button type="button" class="button button-light">
+          Add to cart
+        </button>
+      </div>
+
+      <div class="description">
+        <h4>Description</h4>
+
+        <!-- DESCRIERE DIN JSON -->
+        <p id="productDescription"></p>
+      </div>
+
+      <!-- KEEP: SIZE PICKER EXACT CUM ERA -->
+      <div class="size">
+        <h3>Select Size:</h3>
+
+        <div class="size-options">
+          <label class="size-option">
+            <input type="radio" name="size" value="40"> 40
+          </label>
+          <label class="size-option">
+            <input type="radio" name="size" value="41"> 41
+          </label>
+          <label class="size-option">
+            <input type="radio" name="size" value="42"> 42
+          </label>
+          <label class="size-option">
+            <input type="radio" name="size" value="43"> 43
+          </label>
+          <label class="size-option">
+            <input type="radio" name="size" value="44"> 44
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+
+  <footer class="site-footer">
+    <div class="footer-content-1">
+      <div class="footer-column footer-main">
+        <h3>Stay Fresh</h3>
+        <p>sturdykicks@gmail.com</p>
+        <p>+40732183884</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Links</h3>
+        <p>About us</p>
+        <p>Products</p>
+        <p>Blogs</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Community</h3>
+        <p>About us</p>
+        <p>Products</p>
+        <p>Blogs</p>
+      </div>
+    </div>
+
+    <div class="footer-content-2">
+      <div class="logo-footer">
+        <img src="images/logo.png" alt="Sturdykicks footer logo">
+      </div>
+
+      <div class="copyright-footer">
+        <p>Copyrights. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

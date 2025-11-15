@@ -1,198 +1,296 @@
-//laivstivan
+// =========================
+// CART BADGE (număr coș)
+// =========================
+let cartCount = 0;
+const cartBadge = document.querySelector('.cart-badge');
 
-let counter = 0;
-const counterElement = document.querySelector('.badge.badge-pill.bg-danger');
-
-var elementToHide = document.getElementById("ToHide");
-
-function updateVisibility() {
-  if (counter === 0) {
-    elementToHide.style.display = "none";
-  } else {
-    elementToHide.style.display = "inline-block";
-  }
-}
-updateVisibility();
-
-function incrementCounter() {
-  counter++;
-  updateCounter();
+function updateCartBadge() {
+  if (!cartBadge) return;
+  cartBadge.textContent = cartCount;
+  cartBadge.style.display = cartCount > 0 ? 'inline-block' : 'none';
 }
 
-function updateCounter() {
-  counterElement.innerText = counter;
-  updateVisibility();
-}
-
-for (let i = 1; i <= 16; i++) {
-  var link = document.getElementById("button" + i);
-  link.addEventListener("click", function(event) {
-    event.preventDefault();
-    incrementCounter();
-  });
-
-  
-}
-
-//const searchInput = document.getElementById('searchInput');
-//const searchButton = document.getElementById('searchButton');
-//const searchResults = document.getElementById('searchResults');
-
-// Add an event listener to the search button
-//searchButton.addEventListener('click', function() {
-  // Get the search query from the input field
- // const query = searchInput.value;
-
-  // Simulate a search by displaying the query as the search result
-  //searchResults.textContent = `Search results for: ${query}`;
-//});
-
-
-//Branza
-
-document.addEventListener('DOMContentLoaded', function() {
-  const trendingCategories = document.querySelectorAll('.trending .category');
-  const trendingCards = document.querySelectorAll('.trending .preview .card');
-  const defaultThing = document.getElementById('defaultState');
-  const airForceRow = document.getElementById('air-force-row');
-  const airJordan1Row = document.getElementById('air-jordan-1-row');
-  const airJordan4Row = document.getElementById('air-jordan-4-row');
-  const dunksRow = document.getElementById('dunks-row');
-
-  trendingCategories.forEach(function(category) {
-    category.addEventListener('click', function() {
-      const selectedCategory = this.dataset.model;
-
-      // Show or hide the specific rows based on the selected category
-      if (selectedCategory === 'air-force') {
-        airForceRow.style.display = 'flex';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'none';
-        dunksRow.style.display = 'none';
-        defaultThing.style.display = 'none';
-      } else if (selectedCategory === 'air-jordan') {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'flex';
-        airJordan4Row.style.display = 'none';
-        dunksRow.style.display = 'none';
-        defaultThing.style.display = 'none';
-      } else if (selectedCategory === 'air-jordan-4') {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'flex';
-        dunksRow.style.display = 'none';
-        defaultThing.style.display = 'none';
-      } else if (selectedCategory === 'dunks') {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'none';
-        dunksRow.style.display = 'flex';
-        defaultThing.style.display = 'none';
-      } else if (selectedCategory === 'others') {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'none';
-        dunksRow.style.display = 'none';
-        defaultThing.style.display = 'flex';
-      } 
-
-      
-    });
-  });
-
-  // Fresh Kicks This Year section
-  const freshCards = document.querySelectorAll('.preview .card');
-  const airForceModels = document.querySelectorAll('.air-force-model');
-  const airJordan1Models = document.querySelectorAll('.air-jordan-1-model');
-  const airJordan4Models = document.querySelectorAll('.air-jordan-4-model'); // Added Air Jordan 4 models
-  const dunksModels = document.querySelectorAll('.dunks-model'); // Added Dunks models
-
-  freshCards.forEach(function(card) {
-    card.addEventListener('click', function() {
-      const cardTitle = card.querySelector('.card-title').textContent;
-
-      if (cardTitle === 'Air Force 1 Models') {
-        airForceRow.style.display = 'flex';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'none'; // Hide Air Jordan 4 row
-        dunksRow.style.display = 'none'; // Hide Dunks row
-        preview.style.display = 'none';
-      } else if (cardTitle === 'Air Jordan 1 Models') {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'flex';
-        airJordan4Row.style.display = 'none'; // Hide Air Jordan 4 row
-        dunksRow.style.display = 'none'; // Hide Dunks row
-        preview.style.display = 'none';
-      } else if (cardTitle === 'Air Jordan 4 Models') {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'flex';
-        dunksRow.style.display = 'none'; // Hide Dunks row
-        preview.style.display = 'none';
-      } else if (cardTitle === 'Dunks Models') {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'none';
-        dunksRow.style.display = 'flex';
-        preview.style.display = 'none';
-      } else {
-        airForceRow.style.display = 'none';
-        airJordan1Row.style.display = 'none';
-        airJordan4Row.style.display = 'none';
-        dunksRow.style.display = 'none';
-        
-      }
-
-      airForceModels.forEach(function(model) {
-        const modelTitle = model.querySelector('.card-title').textContent;
-
-        if (modelTitle.includes('Air Force 1 Model')) {
-          model.style.display = 'flex';
-        } else {
-          model.style.display = 'none';
-        }
-      });
-
-      airJordan1Models.forEach(function(model) {
-        const modelTitle = model.querySelector('.card-title').textContent;
-
-        if (modelTitle.includes('Air Jordan 1 Model')) {
-          model.style.display = 'flex';
-        } else {
-          model.style.display = 'none';
-        }
-      });
-
-      airJordan4Models.forEach(function(model) {
-        const modelTitle = model.querySelector('.card-title').textContent;
-
-        if (modelTitle.includes('Air Jordan 4 Model')) {
-          model.style.display = 'flex';
-        } else {
-          model.style.display = 'none';
-        }
-      });
-
-      dunksModels.forEach(function(model) {
-        const modelTitle = model.querySelector('.card-title').textContent;
-
-        if (modelTitle.includes('Dunks Model')) {
-          model.style.display = 'flex';
-        } else {
-          model.style.display = 'none';
-        }
-      });
-    });
+// orice buton "Add to cart" (carduri produse)
+document.querySelectorAll('.button.button-dark.align-end').forEach(btn => {
+  btn.addEventListener('click', () => {
+    cartCount++;
+    updateCartBadge();
   });
 });
 
+// =========================
+// DOMContentLoaded – NAV, TRENDING, PREVIEW, SEARCH
+// =========================
+document.addEventListener('DOMContentLoaded', function () {
+  // -------------------------
+  // BURGER NAV
+  // -------------------------
+  const navToggle = document.querySelector('.nav-toggle');
+  const navInner = document.querySelector('.nav-inner');
 
+  if (navToggle && navInner) {
+    navToggle.addEventListener('click', function () {
+      document.body.classList.toggle('nav-open');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+    });
+  }
 
+  // -------------------------
+  // TRENDING CATEGORIES + ROWS
+  // -------------------------
+  const trendingSection = document.querySelector('.trending');
+  if (trendingSection) {
+    const categories = trendingSection.querySelectorAll('.categories .category');
+    const defaultState = document.getElementById('defaultState');
 
+    const airForceRow = document.getElementById('air-force-row');
+    const airJordan1Row = document.getElementById('air-jordan-1-row');
+    const airJordan4Row = document.getElementById('air-jordan-4-row');
+    const dunksRow = document.getElementById('dunks-row');
 
+    const rows = {
+      'air-force': airForceRow,
+      'air-jordan': airJordan1Row,
+      'air-jordan-4': airJordan4Row,
+      'dunks': dunksRow
+    };
+
+    function hideAllRows() {
+      Object.values(rows).forEach(row => {
+        if (row) row.style.display = 'none';
+      });
+    }
+
+    function showRow(key) {
+      if (!defaultState) return;
+      defaultState.style.display = 'none';
+      hideAllRows();
+      const row = rows[key];
+      if (row) row.style.display = 'grid';
+    }
+
+    function showDefaultState() {
+      hideAllRows();
+      if (defaultState) defaultState.style.display = 'grid';
+    }
+
+    categories.forEach(cat => {
+      cat.addEventListener('click', () => {
+        const model = cat.dataset.model;
+
+        // stil vizual pentru categoria activă (opțional, dacă ai o clasă în CSS)
+        categories.forEach(c => c.classList.remove('is-active-category'));
+        cat.classList.add('is-active-category');
+
+        if (model === 'others') {
+          showDefaultState();
+        } else {
+          showRow(model);
+        }
+      });
+    });
+
+    // -------------------------
+    // PREVIEW CARDS CLICK (caruselul vizual)
+    // -------------------------
+    const previewCards = trendingSection.querySelectorAll('#preview .card');
+
+    previewCards.forEach(card => {
+      card.addEventListener('click', () => {
+        if (card.classList.contains('air-force')) {
+          showRow('air-force');
+        } else if (card.classList.contains('air-jordan-4')) {
+          showRow('air-jordan-4');
+        } else if (card.classList.contains('air-jordan')) {
+          showRow('air-jordan');
+        } else if (card.classList.contains('dunks')) {
+          showRow('dunks');
+        }
+      });
+    });
+  }
+
+  // -------------------------
+  // SEARCH – filtrează cardurile după text
+  // -------------------------
+  const searchInput = document.querySelector('.search-input');
+  const searchButton = document.querySelector('.search-button');
+
+  function applySearch() {
+    if (!searchInput) return;
+    const term = searchInput.value.trim().toLowerCase();
+
+    // toate cardurile de produse din grid-uri
+    const cards = document.querySelectorAll('.card-grid article.card');
+    if (!cards.length) return;
+
+    if (!term) {
+      // dacă nu e niciun text – arată toate cardurile
+      cards.forEach(card => {
+        card.style.display = 'flex';
+      });
+      return;
+    }
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(term) ? 'flex' : 'none';
+    });
+  }
+
+  if (searchInput && searchButton) {
+    searchButton.addEventListener('click', applySearch);
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        applySearch();
+      }
+    });
+  }
+});
+
+// =========================
+// IMAGE CHANGE – fallback (dacă mai folosești onclick în HTML)
+// =========================
 function changeImage(imageSrc) {
-  var mainImage = document.getElementById('mainImg');
-  mainImage.src = imageSrc;
+  const mainImage = document.getElementById('mainImg');
+  if (mainImage) {
+    mainImage.src = imageSrc;
+  }
 }
 
+// =========================
+// USER DROPDOWN (LOG IN / SIGN UP)
+// =========================
+document.addEventListener('DOMContentLoaded', function () {
+  const userBtn = document.querySelector('.user-button');
+  const userDropdown = document.querySelector('.user-dropdown');
 
+  if (userBtn && userDropdown) {
+    userBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      userDropdown.style.display =
+        userDropdown.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    document.addEventListener('click', () => {
+      userDropdown.style.display = 'none';
+    });
+  }
+});
+
+// =========================
+// PRODUCT PAGE – DATE DIN JSON
+// =========================
+function getProductId() {
+  return new URLSearchParams(window.location.search).get('id');
+}
+
+async function loadProduct() {
+  // rulează doar dacă există elementele de product page
+  const mainImg = document.getElementById('mainImg');
+  const titleEl = document.getElementById('productTitle');
+  const colorEl = document.getElementById('productColor');
+  const priceEl = document.getElementById('productPrice');
+  const descEl = document.getElementById('productDescription');
+  const thumbsContainer = document.getElementById('thumbnailsContainer');
+
+  if (!mainImg || !titleEl || !colorEl || !priceEl || !descEl || !thumbsContainer) {
+    return; // nu suntem pe product.html
+  }
+
+  const id = getProductId();
+  if (!id) return;
+
+  try {
+    const res = await fetch('products.json');
+    const products = await res.json();
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+
+    // setăm datele din JSON
+    mainImg.src = product.mainImage;
+    mainImg.alt = product.name;
+
+    titleEl.textContent = product.name;
+    colorEl.textContent = product.color;
+    priceEl.textContent = product.price;
+    descEl.textContent = product.description;
+
+    thumbsContainer.innerHTML = '';
+    if (Array.isArray(product.thumbnails)) {
+      product.thumbnails.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = product.name;
+        img.className = 'thumbnail';
+        img.addEventListener('click', () => {
+          mainImg.src = src;
+        });
+        thumbsContainer.appendChild(img);
+      });
+    }
+  } catch (err) {
+    console.error('Eroare la încărcarea produsului din JSON:', err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadProduct);
+
+
+
+// =========================
+// CART SYSTEM (LOCALSTORAGE)
+// =========================
+
+// 1. Încărcăm coșul la pornire
+function loadCart() {
+  const saved = localStorage.getItem("cart");
+  return saved ? JSON.parse(saved) : [];
+}
+
+let cart = loadCart();
+
+// 2. Salvăm coșul în localStorage
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// 3. Actualizăm badge-ul de coș
+function updateCartBadge() {
+  const badge = document.querySelector(".cart-badge");
+  if (badge) {
+    badge.textContent = cart.length;
+    badge.style.display = cart.length > 0 ? "flex" : "none";
+  }
+}
+
+// rulează inițial
+updateCartBadge();
+
+// 4. Adaugă un produs în coș
+function addToCart(productId) {
+  // dacă produsul există deja în coș, doar îi creștem cantitatea
+  const existing = cart.find(item => item.id === productId);
+
+  if (existing) {
+    existing.qty++;
+  } else {
+    // altfel îl adăugăm
+    cart.push({ id: productId, qty: 1 });
+  }
+
+  saveCart();
+  updateCartBadge();
+}
+
+// 5. Activăm toate butoanele Add to cart
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-product-id]").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();   // prevenim click-ul pe card
+      const id = btn.getAttribute("data-product-id");
+      addToCart(id);
+    });
+  });
+});
