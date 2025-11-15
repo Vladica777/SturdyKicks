@@ -1,0 +1,80 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav.navbar{ 
+    border-bottom: 1px solid black;
+    padding: 14px 16px;
+    height: 90px;
+    top: 0;
+}
+#icon{
+    height: 25px;
+    width: 25px;
+}
+
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+  }
+
+
+footer{
+    background-color: rgb(26, 24, 24);
+    padding: 50px;
+    padding-bottom: 0;
+    margin-right: 0;
+    color: white;
+    margin-bottom: 0;
+  }
+  
+  
+  footer h3{
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  
+  .footer-content-1{
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+  }
+  
+  .footer-content-2{
+  padding-top: 20px;
+  }
+  
+  .footer-content-2 img{
+    height: 60px;
+  }
+  
+  .copyright-footer{
+    text-align: center;
+  }
+  
+  
+  
+  
+  .gallery {
+    
+    gap: 10px;
+  }
+  
+ 
+  
+  .thumbnails {
+    
+    gap: 30px;
+  }
+  
+  .thumbnail {
+    width: 100px;
+    cursor: pointer;
+  }

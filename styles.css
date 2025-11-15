@@ -1,0 +1,198 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav.navbar{ 
+    border-bottom: 1px solid black;
+    padding: 14px 16px;
+    height: 90px;
+    top: 0;
+}
+#icon{
+    height: 25px;
+    width: 25px;
+}
+
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+  }
+
+  .landing-page{
+      height: 500px;
+  }
+
+  .landing-content {
+    background-image: url("landing-content-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+    
+  }
+
+  .advice{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .categories{
+    border-top: 2px solid black;
+    border-bottom:2px solid black;
+    
+  }
+
+  .categories h4{
+    margin: 20px;
+  }
+   
+  .card-img-top {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+  }
+
+   
+   .categories h4 {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .categories h4:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    
+  }
+
+  
+  .card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  #advice-container{
+    text-align: center;
+    font-size: 14px;
+    
+}
+
+  
+button.carousel-control-prev,
+button.carousel-control-next {
+    display: none;
+}
+
+
+
+
+.newsletter{
+    background-image: url(images/newsletter.png);
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    height: 300px;
+ } 
+
+ #newsletter-content{
+    text-align: center;
+    font-weight: bold;
+    height: 100%;
+ }
+
+
+ #newsletter-content h2{
+    font-weight: bold
+ }
+
+ #newsletter-input{
+    height:50px ;
+    border-radius: 5px;
+ }
+
+ #subscribe-button{
+    height:50px ;
+    background-color: rgb(31, 29, 29);
+    color: white;
+    font-weight: bold;
+ }
+
+
+
+p,a{
+  font-family: Raleway;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: "DM Serif", sans-serif;
+}
+
+
+
+
+
+
+footer{
+  background-color: rgb(26, 24, 24);
+  padding: 50px;
+  padding-bottom: 0;
+  margin-right: 0;
+  color: white;
+  margin-bottom: 0;
+}
+
+
+footer h3{
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.footer-content-1{
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.footer-content-2{
+padding-top: 20px;
+}
+
+.footer-content-2 img{
+  height: 60px;
+}
+
+.copyright-footer{
+  text-align: center;
+}
+
+
+
+
+.gallery {
+  
+  gap: 10px;
+}
+
+
+
+.thumbnails {
+  
+  gap: 30px;
+}
+
+.thumbnail {
+  width: 100px;
+  cursor: pointer;
+}
+
+
+.search-input:hover{
+  display: block;
+}

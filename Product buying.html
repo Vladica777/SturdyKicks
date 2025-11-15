@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Buying</title>
+
+
+
+  <link rel="stylesheet" href="style_product.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary nav-active nav-underline sticky-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="Landing Page.html">
+        <img src="images/logo.png" style="width: 88px; height: 88px;" alt="Logo">
+      </a>
+
+      <!-- Hamburger Menu Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <!-- Centered Content -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="Landing Page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="navbar-nav">
+        <!-- Shopping Cart -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span id="ToHide" class="badge badge-pill bg-danger">0</span>
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+
+        <!-- Search -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+
+        <!-- Log In -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="container row" style="flex-wrap: nowrap;">
+        <div class="image-gallery col-lg-6 col-md-12 me-4">
+        
+        
+            <div class="gallery mt-5 mb-5 ">
+                <div class="main-image d-flex justify-content-center">
+                    <img id="mainImg" src="images/air-force-models.png" alt="Main Image">
+                </div>
+                <div class="thumbnails d-flex justify-content-center mt-5">
+                    <img class="thumbnail" src="images/air-force-models.png" alt="Side Image 1"
+                        onclick="changeImage('images/air-force-models.png')">
+                    <img class="thumbnail" src="images/air-force-side-model-1.png" alt="Side Image 2" 
+                        onclick="changeImage('images/air-force-side-model-1.png')">    
+                    <img class="thumbnail" src="images/air-force-side-model-2.png" alt="Side Image 3"
+                        onclick="changeImage('images/air-force-side-model-2.png')">
+                    <img class="thumbnail" src="images/air-force-side-model-3.png" alt="Side Image 4"
+                        onclick="changeImage('images/air-force-side-model-3.png')">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container-text col-6 align-content-lg-center mt-5 mb-5">
+            <div class="title">
+                <h1>Nike Air Force 1 Low '07</h1>
+            </div>
+
+            <div class="subtitle">
+                <h4>White</h4>
+            </div>
+
+            <div class="price mb-4">
+                <h4>119.00&euro;</h4>
+            </div>
+
+            <div class="buttons mb-5">
+                <button onclick="window.location.href='Card Payment Flow.html'" type="button" class="btn btn-success">Check Out</button>
+                <button type="button" class="btn btn-light">Add to cart</button>
+
+            </div>
+
+            <div class="description mb-5">
+                <h4>Description</h4>
+
+                The Air Force 1 Triple White is a popular sneaker model created by Nike, specifically in their iconic Air Force 1 line. This particular version is recognized for its clean and minimalistic design, featuring an all-white color scheme. The "Triple White" name refers to the fact that the entire shoe, including the upper, midsole, and outsole, is predominantly white.                </h6>
+
+            </div>
+
+            <div class="size">
+
+                
+                    <h3>Select Size:</h3>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-outline-success ">
+                        <input type="radio" name="size" value="40" > 40
+                      </label>
+                      <label class="btn btn-outline-success">
+                        <input type="radio" name="size" value="41"> 41
+                      </label>
+                      <label class="btn btn-outline-success">
+                        <input type="radio" name="size" value="42"> 42
+                      </label>
+                      <label class="btn btn-outline-success">
+                        <input type="radio" name="size" value="43"> 43
+                      </label>
+                      <label class="btn btn-outline-success">
+                        <input type="radio" name="size" value="44"> 44
+                      </label>
+                    </div>
+                  </div>
+                
+        </div>
+
+
+
+
+        
+
+
+
+
+
+    </div>
+  </div>  
+
+
+  <footer class="row">
+    <div class="footer-content-1 row">
+      <div class="col-9">
+        <h3>Stay Fresh</h3>
+        <p>sturdykicks@gmail.com</p>
+        <p>+40732183884</p>
+      </div>
+
+      <div class="col">
+        <h3>Links</h3>
+        <p>About us</p>
+        <p>Products</p>
+        <p>Blogs</p>
+      </div>
+
+      <div class="col">
+        <h3>Community</h3>
+        <p>About us</p>
+        <p>Products</p>
+        <p>Blogs</p>
+      </div>
+    </div>
+
+    <div class="footer-content-2 d-flex">
+      <div class="logo-footer col">
+        <img src="images/logo.png" alt="logo">
+      </div>
+
+      <div class="copyright-footer align-items-center">
+        <p>Copyrights. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+
+</html>
