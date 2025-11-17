@@ -6,6 +6,7 @@
   <title>Payment</title>
 
   <link rel="stylesheet" href="style_card.css">
+  <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,58 +17,65 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="main-nav">
+   <nav class="main-nav">
       <!-- Logo -->
       <a class="nav-logo" href="index.html">
         <img src="images/logo.png" alt="Sturdykicks logo">
       </a>
 
+
+
+      <div class="nav-inner">
+        <!-- Centered Content -->
+        <ul id="primary-navigation" class="nav-links">
+          <li><a class="nav-link is-active" aria-current="page" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="#trending">Products</a></li>
+          <li><a class="nav-link" href="#">About us</a></li>
+          <li><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+      </div>
+      <div>
+        <ul class="nav-icons">
+          <!-- Search -->
+          <li class="nav-search">
+            <input class="search-input" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+            <button class="nav-icon-link search-button" type="button" id="searchIcon">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+          </li>
+
+          <!-- Shopping Cart -->
+          <li>
+            <a class="nav-icon-link" href="Card Payment Flow.html">
+              <span id="ToHide" class="cart-badge">0</span>
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <!-- Log In -->
+          <li class="user-menu">
+            <button class="nav-icon-link user-button">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </button>
+
+            <div class="user-dropdown">
+              <a href="#!" class="dropdown-item">Log in</a>
+              <a href="#!" class="dropdown-item">Sign up</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
       <!-- Burger -->
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
         aria-controls="primary-navigation">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
 
-      <div class="nav-inner">
-        <!-- Centered Content -->
-        <ul id="primary-navigation" class="nav-links">
-          <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="index.html#trending">Products</a></li>
-          <li><a class="nav-link" href="#">About us</a></li>
-          <li><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-
-        <ul class="nav-icons">
-          <!-- Shopping Cart -->
-          <li>
-            <a class="nav-icon-link" href="Card Payment Flow.html">
-              <span id="ToHide" class="cart-badge">1</span>
-              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-            </a>
-          </li>
-
-          <!-- Search -->
-          <li class="nav-search">
-            <input class="search-input" type="search" placeholder="Search" aria-label="Search">
-            <button class="nav-icon-link search-button" type="button">
-              <i class="fas fa-search" aria-hidden="true"></i>
-            </button>
-          </li>
-
-          <!-- Log In -->
-          <li>
-            <a class="nav-icon-link" href="#">
-              <i class="fas fa-user" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
     </nav>
   </header>
 
@@ -75,55 +83,36 @@
     <section class="checkout-layout">
       <!-- Order summary -->
       <section class="order-summary">
-        <header class="order-header">
-          <h3>Order summary</h3>
-        </header>
+  <header class="order-header">
+    <h3>Order summary</h3>
+  </header>
 
-        <article class="product-summary">
-          <div class="product-main">
-            <img src="images/air-force-models.png" alt="Nike Air Force 1 Low '07 White (M)" class="product-image">
-            <div class="product-description">
-              <h5>Nike Air Force 1 Low '07</h5>
-              <p>White (M)</p>
-              <p>Size: 44 (EU)</p>
-            </div>
-          </div>
-          <div class="product-price">
-            <h5>119.00&euro;</h5>
-          </div>
-        </article>
+  <!-- AICI SE VOR ÎNCĂRCA PRODUSELE DIN COȘ -->
+  <div id="cartItems"></div>
 
-        <div class="coupon-wrapper">
-          <form class="coupon-form">
-            <label class="coupon-label" for="couponInput">Gift or discount code</label>
-            <div class="coupon-input-row">
-              <input id="couponInput" type="text" class="coupon-input" placeholder="Gift or discount code">
-              <button type="button" class="button button-dark coupon-button">Apply</button>
-            </div>
-          </form>
-        </div>
+  <!-- Subtotal & Shipping -->
+  <div class="subtotal">
+    <div class="subtotal-labels">
+      <p>Subtotal</p>
+      <p>Shipping</p>
+    </div>
+    <div class="subtotal-values">
+      <p id="subtotalValue">0€</p>
+      <p id="shippingValue">7.24€</p>
+    </div>
+  </div>
 
-        <div class="subtotal">
-          <div class="subtotal-labels">
-            <p>Subtotal</p>
-            <p>Shipping</p>
-          </div>
-          <div class="subtotal-values">
-            <p>119&euro;</p>
-            <p>7.24&euro;</p>
-          </div>
-        </div>
+  <div class="total">
+    <div class="total-text">
+      <h3>Total</h3>
+      <p>Including 7.24€ shipping</p>
+    </div>
+    <div class="total-amount">
+      <h3 id="totalValue">0€</h3>
+    </div>
+  </div>
+</section>
 
-        <div class="total">
-          <div class="total-text">
-            <h3>Total</h3>
-            <p>Including 7.24&euro; shipping</p>
-          </div>
-          <div class="total-amount">
-            <h3>126.74&euro;</h3>
-          </div>
-        </div>
-      </section>
 
       <!-- Payment -->
       <section class="payment-section">
@@ -191,7 +180,7 @@
         </form>
 
         <div class="pay-button">
-          <button class="button button-dark button-full">Pay 126.24&euro;</button>
+          <button class="pay-button button button-dark button-full" type="submit"  id="payButton">Pay 126.24&euro;</button>
           <p class="payment-note">
             Your personal data will be used to process your order, support your experience throughout this website,
             and for other purposes described in our privacy policy.

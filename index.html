@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="product.html">
+  <link rel="prefetch" href="product.html">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
   <header class="site-header">
     <nav class="main-nav">
       <!-- Logo -->
-      <a class="nav-logo" href="Landing Page.html">
+      <a class="nav-logo" href="index.html">
         <img src="images/logo.png" alt="Sturdykicks logo">
       </a>
 
@@ -144,7 +144,7 @@
       <h5 class="card-title">Air Force 1 Model 1</h5>
       <p class="card-text">Men's Shoes</p>
       <p>119.00&euro;</p>
-      <a id="button1"  class="button button-dark align-end">Add to cart</a>
+      <a id="button1"  class="button button-dark align-end" data-product-id="air-force-1-model1">Add to cart</a>
     </div>
   </article>
 
@@ -154,7 +154,7 @@
       <h5 class="card-title">Air Force 1 Model 2</h5>
       <p class="card-text">Men's Shoes</p>
       <p>119.00&euro;</p>
-      <a id="button2"  class="button button-dark align-end">Add to cart</a>
+      <a id="button2"  class="button button-dark align-end" data-product-id="air-force-1-model2" onclick="event.stopPropagation();">Add to cart</a>
     </div>
   </article>
 
@@ -164,7 +164,7 @@
       <h5 class="card-title">Air Force 1 Model 3</h5>
       <p class="card-text">Men's Shoes</p>
       <p>119.00&euro;</p>
-      <a id="button3"  class="button button-dark align-end">Add to cart</a>
+      <a id="button3"  class="button button-dark align-end" data-product-id="air-force-1-model3">Add to cart</a>
     </div>
   </article>
 
@@ -174,7 +174,7 @@
       <h5 class="card-title">Air Force 1 Model 4</h5>
       <p class="card-text">Men's Shoes</p>
       <p>119.00&euro;</p>
-      <a id="button4"  class="button button-dark align-end">Add to cart</a>
+      <a id="button4"  class="button button-dark align-end" data-product-id="air-force-1-model4">Add to cart</a>
     </div>
   </article>
 </div>
@@ -187,7 +187,7 @@
       <h5 class="card-title">Air Jordan 1 Model 1</h5>
       <p class="card-text">Men's Shoes</p>
       <p>249.00&euro;</p>
-      <a id="button5" href="product.html?id=air-jordan-1-model1" class="button button-dark align-end">Add to cart</a>
+      <a id="button5"  class="button button-dark align-end" data-product-id="air-jordan-1-model1">Add to cart</a>
     </div>
   </article>
 
@@ -197,7 +197,7 @@
       <h5 class="card-title">Air Jordan 1 Model 2</h5>
       <p class="card-text">Men's Shoes</p>
       <p>249.00&euro;</p>
-      <a id="button6" href="product.html?id=air-jordan-1-model2" class="button button-dark align-end">Add to cart</a>
+      <a id="button6" data-product-id="air-jordan-1-model2" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -207,7 +207,7 @@
       <h5 class="card-title">Air Jordan 1 Model 3</h5>
       <p class="card-text">Men's Shoes</p>
       <p>249.00&euro;</p>
-      <a id="button7" href="product.html?id=air-jordan-1-model3" class="button button-dark align-end">Add to cart</a>
+      <a id="button7" data-product-id="air-jordan-1-model3" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -217,7 +217,7 @@
       <h5 class="card-title">Air Jordan 1 Model 4</h5>
       <p class="card-text">Men's Shoes</p>
       <p>249.00&euro;</p>
-      <a id="button8" href="product.html?id=air-jordan-1-model4" class="button button-dark align-end">Add to cart</a>
+      <a id="button8" data-product-id="air-jordan-1-model4" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 </div>
@@ -230,7 +230,7 @@
       <h5 class="card-title">Air Jordan 4 Model 1</h5>
       <p class="card-text">Men's Shoes</p>
       <p>349.00&euro;</p>
-      <a id="button9" href="product.html?id=air-jordan-4-model1" class="button button-dark align-end">Add to cart</a>
+      <a id="button9" data-product-id="air-jordan-4-model1" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -240,7 +240,7 @@
       <h5 class="card-title">Air Jordan 4 Model 2</h5>
       <p class="card-text">Men's Shoes</p>
       <p>349.00&euro;</p>
-      <a id="button10" href="product.html?id=air-jordan-4-model2" class="button button-dark align-end">Add to cart</a>
+      <a id="button10" data-product-id="air-jordan-4-model2" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -250,7 +250,7 @@
       <h5 class="card-title">Air Jordan 4 Model 3</h5>
       <p class="card-text">Men's Shoes</p>
       <p>349.00&euro;</p>
-      <a id="button11" href="product.html?id=air-jordan-4-model3" class="button button-dark align-end">Add to cart</a>
+      <a id="button11" data-product-id="air-jordan-4-model3" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -260,7 +260,7 @@
       <h5 class="card-title">Air Jordan 4 Model 4</h5>
       <p class="card-text">Men's Shoes</p>
       <p>349.00&euro;</p>
-      <a id="button12" href="product.html?id=air-jordan-4-model4" class="button button-dark align-end">Add to cart</a>
+      <a id="button12" data-product-id="air-jordan-4-model4" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 </div>
@@ -273,7 +273,7 @@
       <h5 class="card-title">Dunks Model 1</h5>
       <p class="card-text">Men's Shoes</p>
       <p>149.00&euro;</p>
-      <a id="button13" href="product.html?id=dunk-model1" class="button button-dark align-end">Add to cart</a>
+      <a id="button13" data-product-id="dunk-model1" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -283,7 +283,7 @@
       <h5 class="card-title">Dunks Model 2</h5>
       <p class="card-text">Men's Shoes</p>
       <p>149.00&euro;</p>
-      <a id="button14" href="product.html?id=dunk-model2" class="button button-dark align-end">Add to cart</a>
+      <a id="button14" data-product-id="dunk-model2" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -293,7 +293,7 @@
       <h5 class="card-title">Dunks Model 3</h5>
       <p class="card-text">Men's Shoes</p>
       <p>149.00&euro;</p>
-      <a id="button15" href="product.html?id=dunk-model3" class="button button-dark align-end">Add to cart</a>
+      <a id="button15" data-product-id="dunk-model3" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 
@@ -303,13 +303,13 @@
       <h5 class="card-title">Dunks Model 4</h5>
       <p class="card-text">Men's Shoes</p>
       <p>149.00&euro;</p>
-      <a id="button16" href="product.html?id=dunk-model4" class="button button-dark align-end">Add to cart</a>
+      <a id="button16" data-product-id="dunk-model4" class="button button-dark align-end">Add to cart</a>
     </div>
   </article>
 </div>
 
 
-    <section class="fresh section-spacing-lg">
+    <section class="fresh section-spacing-lg" style="padding-top: 50px;">
       <header class="section-header text-center">
         <h1 class="section-title">Fresh Kicks This Year</h1>
         <h4 class="section-subtitle">These are the most popular sneakers this year</h4>
