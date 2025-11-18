@@ -24,24 +24,28 @@
         <img src="images/logo.png" alt="Sturdykicks logo">
       </a>
 
-      <!-- Burger -->
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
-        aria-controls="primary-navigation">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+
 
       <div class="nav-inner">
         <!-- Centered Content -->
         <ul id="primary-navigation" class="nav-links">
-          <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-          <li><a class="nav-link is-active" href="#">Products</a></li>
+          <li><a class="nav-link is-active" aria-current="page" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="#trending">Products</a></li>
           <li><a class="nav-link" href="#">About us</a></li>
           <li><a class="nav-link" href="#">Contact</a></li>
         </ul>
 
+      </div>
+      <div>
         <ul class="nav-icons">
+          <!-- Search -->
+          <li class="nav-search">
+            <input class="search-input" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+            <button class="nav-icon-link search-button" type="button" id="searchIcon">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+          </li>
+
           <!-- Shopping Cart -->
           <li>
             <a class="nav-icon-link" href="Card Payment Flow.html">
@@ -50,22 +54,29 @@
             </a>
           </li>
 
-          <!-- Search -->
-          <li class="nav-search">
-            <input class="search-input" type="search" placeholder="Search" aria-label="Search">
-            <button class="nav-icon-link search-button" type="button">
-              <i class="fas fa-search" aria-hidden="true"></i>
+          <!-- Log In -->
+          <li class="user-menu">
+            <button class="nav-icon-link user-button">
+              <i class="fas fa-user" aria-hidden="true"></i>
             </button>
+
+            <div class="user-dropdown">
+              <a href="#!" class="dropdown-item">Log in</a>
+              <a href="#!" class="dropdown-item">Sign up</a>
+            </div>
           </li>
 
-          <!-- Log In -->
-          <li>
-            <a class="nav-icon-link" href="#">
-              <i class="fas fa-user" aria-hidden="true"></i>
-            </a>
-          </li>
         </ul>
       </div>
+
+      <!-- Burger -->
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
     </nav>
   </header>
 
